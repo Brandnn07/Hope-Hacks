@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="googleApis.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Locations</title>
+</head>
+<body>
+    <section class="sectionForAPI">
+        <header>
+            <h2> RealEstate Agencies near you </h2>
+        </header>
+
+
+        <p id="getLocation"></p>
+        <p id="demo"></p>
+        <section class="container">
+            <div class="items item1">
+
+                <div id="container">
+                    <div id="map"></div>
+                    <div id="sidebar">
+                        <h2>Results</h2>
+                        <ul id="places"></ul>
+                        <button id="more">Load more results</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="getLocation"></div>
+        <section class="shelterContainer">
+        </section>
+
+    </section>
+    <div class="w3-container"> 
+      </div>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHM6qbhNeeOu_VUF_3mgFXog7rISleV5s&callback=initMap&libraries=places&v=weekly"
+        defer></script>
+        <script src="googleApis.js"></script>
+</body>
+</html>

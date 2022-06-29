@@ -1,0 +1,25 @@
+{
+  "name": "hope-hacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brandnn07/Hope-Hacks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brandnn07/Hope-Hacks/issues"
+  },
+  "homepage": "https://github.com/Brandnn07/Hope-Hacks#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "google-search-results-nodejs": "^2.1.0",
+    "requirejs": "^2.3.6"
+  }
+}
