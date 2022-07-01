@@ -1,5 +1,6 @@
 const container = document.querySelector(".w3-container");
 const locationBtn = document.querySelector("#getLocation")
+// const searchBtn = document.querySelector('#googleSearchBtn');
 var query;
 
 
@@ -79,66 +80,49 @@ async function addPlaces(places, map) {
       const btn = document.createElement("button");
 
       btn.setAttribute('id', 'googleSearchBtn');
+      btn.setAttribute('value', place.name)
+      btn.textContent = `Search for ${place.name}`
       li.textContent = place.name;
       placesList.appendChild(li);
       placesList.appendChild(btn);
       li.addEventListener("click", () => {
         map.setCenter(place.geometry.location);
       });
-      let org = place.name
-      btn.addEventListener("submit", fetchSearch(org))
+      // let org = btn.value
+      btn.addEventListener("click", async function () {
+        let query = btn.value
+        console.log(query);
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-User-Agent': 'desktop',
+            'X-Proxy-Location': 'EU',
+            'X-RapidAPI-Key': '949aff8ad2mshf5a360e795ac417p17d83bjsn73bba83ff5ef',
+            'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
+        }
+  };
+        let response = await fetch(`https://google-search3.p.rapidapi.com/api/v1/search/q=${query}`, options)
+        let data = await response.json();
+        let info = data.results[0];
+        const {link, title} = info;
+        console.log(link, title);
+        var searchedBy = 'Searched using Google';
+      
+        var content = `
+        <div class="w3-card-4" style="align-items: center width:70%">
+        <header class="w3-container w3-light-grey">
+            <h3>${title}</h3>
+          </header>
+          <div class="w3-container">
+            <hr>
+            <img src="./photos/gogle.png" alt="Google" class="w3-left w3-circle w3-margin-right" style="width:60px">
+            <p>${searchedBy}</p><br>
+          </div>
+          <a href="${link}" target="_blank" class="w3-button w3-block w3-dark-grey">${link}</a>
+          </div>
+        `
+        container.innerHTML += content;
+      })
     }
   }
 }
-
-async function fetchSearch(org) {
-  let query = org
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-User-Agent': 'desktop',
-      'X-Proxy-Location': 'EU',
-      'X-RapidAPI-Key': '949aff8ad2mshf5a360e795ac417p17d83bjsn73bba83ff5ef',
-      'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
-    }
-  };
-  let response = await fetch(`https://google-search3.p.rapidapi.com/api/v1/search/q=${query}`, options)
-  let data = await response.json();
-  let info = data.results[0];
-  console.log(info)
-  Object.entries(info).forEach(key => {
-    if (key[0] === "title") {
-      var card = document.createElement('div');
-      card.classList = 'w3-card-4';
-      card.style = 'width:70%';
-      var title = key[1];
-      var test2 = 'test';
-      var test3 = 'testy';
-      var link = 'the link will go here';
-    
-      var content = `
-      <header class="w3-container w3-light-grey">
-          <h3>${title}</h3>
-        </header>
-        <div class="w3-container">
-          <hr>
-          <img src="./photos/gogle.png" alt="Google" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <p>${test3}</p><br>
-        </div>
-        <button class="w3-button w3-block w3-dark-grey">${link}</button>
-      `
-      container.innerHTML += content;
-      console.log(key);
-    } else if (key[0] === "link") {
-
-    }
-  });
-}
-
-// .then(response => response.json())
-// .then(response => console.log(response))
-// .catch(err => console.error(err));
-
-
-
-// https://data.cityofchicago.org/resource/eep4-c978.json Info for Chicago homelessness crisis

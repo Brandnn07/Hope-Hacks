@@ -21,13 +21,23 @@
   
   html,
   body {
+    background-color: #EDDCD9;
     height: 100%;
     margin: 0;
     padding: 0;
   }
+
+  #googleSearchBtn {
+    background-color: #DE5499;
+    padding: 11px;
+  }
+
+  #more {
+    /* background-color: #E99F4C; */
+  }
   
   #container {
-    height: 100%;
+    height: 870px;
     display: flex;
   }
   
@@ -87,9 +97,9 @@
     padding: 1rem;
     flex-grow: 0;
     cursor: pointer;
-    background: #1a73e8;
+    /* background: #1a73e8; */
     font-size: 1.5rem;
-    color: white;
+    /* color: white; */
     border: none;
   }
   
