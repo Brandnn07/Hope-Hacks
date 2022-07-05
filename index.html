@@ -1,28 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/googleApis.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./styles/main.css"/>
     <script
       src="https://kit.fontawesome.com/cc1a723176.js"
       crossorigin="anonymous"
     ></script>
-    <title>Locations</title>
+    <title>Femína</title>
 </head>
-
 <body>
-
-    <div style="height: 184px;" class="nav">
+    <div class="nav">
         <div class="left">
-         <h1 style="margin-top: 50px;" class="title">Femína </h1>
-        </div>
+         <h1 class="title">Femína </h1>
         <a href="index.html">
         <img src="./photos/femi__na-removebg-preview.png" alt="logo" width="200" height="200">
     </a>
+</div>
         <div class="right">
             <ul>
                 <li><a href="index.html">About</a></li>
@@ -32,40 +28,28 @@
             </ul>
         </div>
     </div>
-
-    <section class="sectionForAPI">
-        <!-- <header>
-            <h2> RealEstate Agencies near you </h2>
-        </header> -->
-
-
-        <p id="getLocation"></p>
-        <p id="demo"></p>
-        <section class="container">
-            <div class="items item1">
-
-                <div id="container">
-                    <div id="map"></div>
-                    <div id="sidebar">
-                        <h2>Results</h2>
-                        <ul id="places"></ul>
-                        <button id="more">Load more results</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div id="getLocation"></div>
-
-    </section>
-    <div class="w3-container">
-    </div>
-    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHM6qbhNeeOu_VUF_3mgFXog7rISleV5s&callback=initMap&libraries=places&v=weekly"
-        defer></script>
-    <script src="googleApis.js"></script>
-
+    <div class="herotwo">
+        <div class="contenttwo">
+          <h1>In a time where women's rights and health are being challenged, our intention is to provide easy access to resources for women worldwide to use.</h1>
+          <button id="learn">Learn more</button>
+          <script type="text/javascript">
+            document.getElementById("learn").onclick = function () {
+              location.href = "locations.html";
+            };
+            </script>
+        </div>
+      </div>
+    <div class="heroOne">
+        <div class="content">
+          <h1>Our purpose is to provide women worldwide with an easy-to-use and effective tool for tracking their menstrual cycle as well as provide tools and resources as needed.</h1>
+          <button id="button">Give it a try</button>
+          <script type="text/javascript">
+            document.getElementById("button").onclick = function () {
+              location.href = "tracking.html";
+            };
+            </script>
+        </div>
+      </div>
     <footer>
         <div class="footer">
            <div class="yes">
@@ -95,5 +79,4 @@
         </div>
       </footer>
 </body>
-
 </html>
