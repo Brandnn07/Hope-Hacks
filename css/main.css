@@ -24,7 +24,7 @@ body {
 }
 body, input, button {
   color: var(--c-main-text);
-  font-family: Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 a {
   color: var(--c-theme-first);
@@ -58,7 +58,8 @@ h1 {
 
 /*=== grid */
 .main-header {
-  height: var(--height-top);
+  height: 180px;
+
 }
 .main-nav {
   height: var(--height-bottom);
