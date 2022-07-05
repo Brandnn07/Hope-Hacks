@@ -66,7 +66,7 @@ h1 {
 }
 .main-content {
   padding-bottom: var(--height-bottom);
-  padding-top: 180px;
+  padding-top: 10px;
 }
 .main-section--home,
 .main-section--log,
