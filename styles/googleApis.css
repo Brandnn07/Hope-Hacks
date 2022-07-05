@@ -1,5 +1,6 @@
 .items {
-    font-size: 20px;
+  border-radius: 10px;
+    font-size: 16px;
     /* padding: 10px; */
     background-color: rgb(218, 236, 250);
     /* padding: 20px; */
@@ -12,6 +13,12 @@
     display: grid;
     gap: 10px;
     margin: 10px;
+    border-radius: 10px;
+
+  }
+
+  .sectionForApi {
+    border-radius: 10px;
   }
   
   

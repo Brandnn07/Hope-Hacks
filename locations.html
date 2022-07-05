@@ -17,14 +17,16 @@
 <body>
 
     <div class="nav">
-        <h1 class="title">Femína </h1>
+        <div class="left">
+         <h1 class="title">Femína </h1>
         <a href="index.html">
-            <img src="./photos/femi__na-removebg-preview.png" alt="logo" width="160" height="160">
-        </a>
-        <div class="navbar">
+        <img src="./photos/femi__na-removebg-preview.png" alt="logo" width="200" height="200">
+    </a>
+</div>
+        <div class="right">
             <ul>
                 <li><a href="about.html">About</a></li>
-                <li><a hred="locations.html">Locations</a></li>
+                <li><a href="locations.html">Locations</a></li>
                 <li><a href="tracking.html">Tracking</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -66,30 +68,32 @@
 
     <footer>
         <div class="footer">
-            <div class="yes">
-                <a href="index.html"></a>
-                <p class="copyright">Copyright &copy: 2022, Website Design by Femína</p>
-            </div>
-            <div class="brand">
-                <ul>
-                    <a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                    <a target="_blank" href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
-                    <a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                </ul>
-            </div>
-            <div class="signup">
-                <h2>STAY CONNECTED</h2>
-                <input type="email" placeholder="Enter your email address" id="footer-email" required>
-                <input onclick="myFunction()" type="submit" value="Sign Up" id="footer-email-btn" required>
-                <script>
-                    function myFunction() {
+           <div class="yes">
+            <a href="index.html"></a>
+            <p class="copyright">Copyright &copy: 2022, Website Design by Femína</p>
+          </div>
+          <div class="brand">
+            <ul>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            </ul>
+          </div>
+          <div class="signup">
+            <h2>STAY CONNECTED</h2>
+            <input type="email"placeholder="Enter your email address"id="footer-email" required>
+              <input onclick="myFunction()" type="submit"value="Sign Up"
+            id="footer-email-btn">
+            <script>
+                 function myFunction() {
+                    var x = document.getElementById("footer-email").required;
                         alert("Thank you for signing up with us!");
                     }
                 </script>
-            </div>
+           </div>
         </div>
-    </footer>
+      </footer>
 </body>
 
 </html>

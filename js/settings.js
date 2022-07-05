@@ -1,5 +1,5 @@
 /* jshint unused:false */
-const version = '';
+const version = '6.0';
 const namespace = 'Tracker';
 
 var defaultSettings = {

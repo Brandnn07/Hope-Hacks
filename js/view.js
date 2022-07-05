@@ -88,7 +88,7 @@
     };
 
     _viewCommands.chrome = function () {
-      version.innerHTML = version;
+      // version.innerHTML = version;
     };
 
     _viewCommands.home = function (model) {
