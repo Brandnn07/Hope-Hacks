@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,18 +7,25 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/googleApis.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script
+      src="https://kit.fontawesome.com/cc1a723176.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Locations</title>
 </head>
+
 <body>
 
     <div class="nav">
-        <h1 class="title">Femina </h1>
-        <img src="photos/femi__na-removebg-preview.png" alt="logo" width="200" height="200">
+        <h1 class="title">Femína </h1>
+        <a href="index.html">
+            <img src="./photos/femi__na-removebg-preview.png" alt="logo" width="160" height="160">
+        </a>
         <div class="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a hred="locations.html">Locations</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -48,12 +56,40 @@
         <div id="getLocation"></div>
 
     </section>
-    <div class="w3-container"> 
-      </div>
+    <div class="w3-container">
+    </div>
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHM6qbhNeeOu_VUF_3mgFXog7rISleV5s&callback=initMap&libraries=places&v=weekly"
         defer></script>
-        <script src="googleApis.js"></script>
+    <script src="googleApis.js"></script>
+
+    <footer>
+        <div class="footer">
+            <div class="yes">
+                <a href="index.html"></a>
+                <p class="copyright">Copyright &copy: 2022, Website Design by Femína</p>
+            </div>
+            <div class="brand">
+                <ul>
+                    <a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                </ul>
+            </div>
+            <div class="signup">
+                <h2>STAY CONNECTED</h2>
+                <input type="email" placeholder="Enter your email address" id="footer-email" required>
+                <input onclick="myFunction()" type="submit" value="Sign Up" id="footer-email-btn" required>
+                <script>
+                    function myFunction() {
+                        alert("Thank you for signing up with us!");
+                    }
+                </script>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

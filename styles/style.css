@@ -2,8 +2,9 @@ body{
     background-color: #EDDCD9;
 }
 .navbar{
+  top: 0;
     background-color: #F2EBE9;
-    height: 200px;
+    height: 140px;
     line-height: 180px;
     text-align: right;
     justify-content: space-between;
@@ -13,6 +14,7 @@ body{
     display: inline-block;
     margin: 0 20px;
     position: relative;
+    padding-bottom: 20px;
 }
 .navbar ul li a {
     color: #E99F4C;
@@ -39,7 +41,7 @@ body{
     display: inline-block;
     color: #DE5499;
     position: absolute;
-    font-size: 70px;
+    font-size: 40px;
     left: 50px;
     line-height: 90px;
 }
@@ -47,4 +49,85 @@ img{
     display: inline-block;
     position: absolute;
     left: 590px;
+}
+
+.footer {
+    display: flex;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    background-color: #F2EBE9;
+    padding-bottom: 30px;
+  }
+  .yes {
+    padding-left: 10%;
+  }
+  .yes p {
+    color: #E99F4C;
+    font-size: 22px;
+  }
+  .brand{
+    display: flex;
+    height: 120px;
+    padding-right: 8%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .brand ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .brand  ul li {
+    margin: 20px;
+    list-style: none;
+  }
+  .brand  ul li a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  .fa-brands {
+    font-size: 2rem;
+    color: #DE5499;
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+  }
+#footer-email{
+    margin-bottom:2rem;
+   width:250px;
+    height:40px;
+   border-radius:4px;
+    outline:none;
+    border:none;
+padding-right: 100px;
+}
+#footer-email::placeholder{
+    color:#b1b1b1;
+   padding-left:0.5rem;
+    font-size:1rem;
+   margin-bottom:1rem;
+}
+#footer-email-btn{
+   width:100px;
+     height:40px;
+   border-radius:4px;
+    background-color: #264143;
+    outline:none;
+    border:none;
+    color:#fff;
+    font-size:16px;
+}
+.signup h2{
+    color: #E99F4C;
+}
+#footer-email-btn:hover{
+    cursor: pointer;
+    transition:all 0.4s ease-out;
+    background-color: #E99F4C;
 }
