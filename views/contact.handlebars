@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<header>
+    <div class="nav">
+        <div class="left">
+         <h1 class="title">Femína </h1>
+        <a href="index.html">
+        <img src="../photos/femi__na-removebg-preview.png" alt="logo" width="200" height="200">
+    </a>
+</div>
+        <div class="right">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a hred="locations.html">Locations</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
+                <li><a href="contact.handlebars">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <form method="POST" action="send">
+            <h3>Contact Us</h3>
+            {{msg}}
+            <input type="text" name="name" id="name" placeholder="Enter Name" required>
+            <input type="text" name="email" id="email" placeholder="Enter Email" required>
+            <input type="text" name="phone" id="phone" placeholder="Enter Phone Number" required>
+            <textarea id="message" name="message" rows="4" placeholder="Type your message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+    <footer>
+        <div class="footer">
+           <div class="yes">
+            <a href="index.html"></a>
+            <p class="copyright">Copyright &copy: 2022, Website Design by Femína</p>
+          </div>
+          <div class="brand">
+            <ul>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            </ul>
+          </div>
+          <div class="signup">
+            <h2>STAY CONNECTED</h2>
+            <input type="email"placeholder="Enter your email address"id="footer-email" required>
+              <input onclick="myFunction()" type="submit"value="Sign Up"
+            id="footer-email-btn">
+            <script>
+                 function myFunction() {
+                    var x = document.getElementById("footer-email").required;
+                        alert("Thank you for signing up with us!");
+                    }
+                </script>
+           </div>
+        </div>
+      </footer>
+
+</html>
